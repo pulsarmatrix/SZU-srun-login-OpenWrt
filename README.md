@@ -20,3 +20,5 @@ nohup python main.py &
 ```
 
 简单写一下，希望能帮到大家🤪
+
+如果有问题欢迎提PR或Issues~
