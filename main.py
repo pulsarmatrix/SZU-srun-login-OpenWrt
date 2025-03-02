@@ -1,4 +1,5 @@
 import time
+import getpass
 
 from apis import LoginManager
 
@@ -13,7 +14,7 @@ def always_login(username, password, checkinterval):
         login()
     except Exception:
         pass
-    
+
     while True:
         time.sleep(checkinterval)
         try:
@@ -23,8 +24,8 @@ def always_login(username, password, checkinterval):
 
 
 if __name__ == "__main__":
-    username = "your username"
-    password = "your password"
+    username = input("Your Account: ")
+    password = getpass.getpass("Your Passwd: ")
     checkinterval = 5 * 60
 
     always_login(username, password, checkinterval)
